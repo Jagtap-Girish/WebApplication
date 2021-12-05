@@ -11,6 +11,61 @@
           "lib/net35/Ado2Entity.dll": {}
         }
       },
+      "Extended.Wpf.Toolkit/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.dll": {},
+          "lib/net40/Xceed.Wpf.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.dll": {},
+          "lib/net40/Xceed.Wpf.Toolkit.dll": {}
+        },
+        "resource": {
+          "lib/net40/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/hu/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net40/it/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/ja-JP/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net40/pt-BR/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net40/ro/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net40/ru/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/sv/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net40/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
       "Humanizer.Core/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2175,6 +2230,9 @@
       "PPMMvc.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.11"
+        },
         "compile": {
           "bin/placeholder/PPMMvc.Models.dll": {}
         },
@@ -2186,6 +2244,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Extended.Wpf.Toolkit": "4.1.0",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "PPMMvc.Models": "1.0.0",
           "System.Configuration.ConfigurationManager": "5.0.0",
@@ -2211,6 +2270,38 @@
         "ado2entity.1.0.0.3.nupkg.sha512",
         "ado2entity.nuspec",
         "lib/net35/Ado2Entity.dll"
+      ]
+    },
+    "Extended.Wpf.Toolkit/4.1.0": {
+      "sha512": "wXyuHE2ut8OIDUgi1dfyX1qVDQClc4ARmM9yfB0MAshudfaWhtXedWR34zSCIN2gu7CPzE3+u9iLvBv5uBxROg==",
+      "type": "package",
+      "path": "extended.wpf.toolkit/4.1.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "Xceed_Logo_Retina-400x400.png",
+        "extended.wpf.toolkit.4.1.0.nupkg.sha512",
+        "extended.wpf.toolkit.nuspec",
+        "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
+        "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
+        "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "lib/net40/Xceed.Wpf.AvalonDock.dll",
+        "lib/net40/Xceed.Wpf.Toolkit.dll",
+        "lib/net40/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/es/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/fr/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/hu/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/it/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/ja-JP/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/pt-BR/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/ro/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/ru/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/sv/Xceed.Wpf.AvalonDock.resources.dll",
+        "lib/net40/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll",
+        "tools/install.ps1"
       ]
     },
     "Humanizer.Core/2.2.0": {
@@ -7420,11 +7511,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\source\\repos\\PPMmvc\\PPMMvc.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Source\\Repos\\WebApplication\\PPMMvc.csproj",
       "projectName": "PPMMvc",
-      "projectPath": "C:\\Users\\hp\\source\\repos\\PPMmvc\\PPMMvc.csproj",
+      "projectPath": "C:\\Users\\hp\\Source\\Repos\\WebApplication\\PPMMvc.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\source\\repos\\PPMmvc\\obj\\",
+      "outputPath": "C:\\Users\\hp\\Source\\Repos\\WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7442,11 +7533,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj": {
-              "projectPath": "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj"
+            "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj": {
+              "projectPath": "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj"
             },
-            "C:\\Users\\hp\\source\\repos\\Repo\\Repo.csproj": {
-              "projectPath": "C:\\Users\\hp\\source\\repos\\Repo\\Repo.csproj"
+            "C:\\Users\\hp\\Source\\Repos\\Repo\\Repo.csproj": {
+              "projectPath": "C:\\Users\\hp\\Source\\Repos\\Repo\\Repo.csproj"
             }
           }
         }
@@ -7503,6 +7594,16 @@
       "warningLevel": 1,
       "message": "Package 'Ado2Entity 1.0.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
       "libraryId": "Ado2Entity",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Extended.Wpf.Toolkit 4.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Extended.Wpf.Toolkit",
       "targetGraphs": [
         "net5.0"
       ]

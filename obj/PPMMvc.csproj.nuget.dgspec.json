@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\source\\repos\\PPMmvc\\PPMMvc.csproj": {}
+    "C:\\Users\\hp\\Source\\Repos\\WebApplication\\PPMMvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj": {
+    "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj",
         "projectName": "PPMMvc.Models",
-        "projectPath": "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj",
+        "projectPath": "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\hp\\source\\repos\\PPMmvc\\PPMMvc.csproj": {
+    "C:\\Users\\hp\\Source\\Repos\\Repo\\Repo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\PPMmvc\\PPMMvc.csproj",
-        "projectName": "PPMMvc",
-        "projectPath": "C:\\Users\\hp\\source\\repos\\PPMmvc\\PPMMvc.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Source\\Repos\\Repo\\Repo.csproj",
+        "projectName": "Repo",
+        "projectPath": "C:\\Users\\hp\\Source\\Repos\\Repo\\Repo.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\source\\repos\\PPMmvc\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Source\\Repos\\Repo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -84,11 +90,88 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj": {
-                "projectPath": "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj"
+              "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj": {
+                "projectPath": "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Extended.Wpf.Toolkit": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\hp\\Source\\Repos\\WebApplication\\PPMMvc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hp\\Source\\Repos\\WebApplication\\PPMMvc.csproj",
+        "projectName": "PPMMvc",
+        "projectPath": "C:\\Users\\hp\\Source\\Repos\\WebApplication\\PPMMvc.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Source\\Repos\\WebApplication\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj": {
+                "projectPath": "C:\\Users\\hp\\Source\\Repos\\PPMMvc.Models\\PPMMvc.Models.csproj"
               },
-              "C:\\Users\\hp\\source\\repos\\Repo\\Repo.csproj": {
-                "projectPath": "C:\\Users\\hp\\source\\repos\\Repo\\Repo.csproj"
+              "C:\\Users\\hp\\Source\\Repos\\Repo\\Repo.csproj": {
+                "projectPath": "C:\\Users\\hp\\Source\\Repos\\Repo\\Repo.csproj"
               }
             }
           }
@@ -130,79 +213,6 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\hp\\source\\repos\\Repo\\Repo.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\Repo\\Repo.csproj",
-        "projectName": "Repo",
-        "projectPath": "C:\\Users\\hp\\source\\repos\\Repo\\Repo.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\source\\repos\\Repo\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj": {
-                "projectPath": "C:\\Users\\hp\\source\\repos\\PPMMvc.Models\\PPMMvc.Models.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.Extensions.Configuration.Abstractions": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "System.Configuration.ConfigurationManager": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.3, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

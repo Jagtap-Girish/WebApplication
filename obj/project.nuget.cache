@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Vl3LpnvfQe58iWWJFdvqWDN8nj4wf1qwCUUt1ET4elTwuvmLJ+t0WAfzx6eD6PjD/KqPMCgrhl2QG/5k7IDmJg==",
+  "dgSpecHash": "NnBhAaajRAV0J9tnk4Jmguots89tbW/mQF9IyMrk66rSIx/rBil7CcCEGoKoUWrxKs5O2GEN2dMS0WR6layppQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\source\\repos\\PPMmvc\\PPMMvc.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Source\\Repos\\WebApplication\\PPMMvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\ado2entity\\1.0.0.3\\ado2entity.1.0.0.3.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\extended.wpf.toolkit\\4.1.0\\extended.wpf.toolkit.4.1.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -146,6 +147,16 @@
       "warningLevel": 1,
       "message": "Package 'Ado2Entity 1.0.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
       "libraryId": "Ado2Entity",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Extended.Wpf.Toolkit 4.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Extended.Wpf.Toolkit",
       "targetGraphs": [
         "net5.0"
       ]

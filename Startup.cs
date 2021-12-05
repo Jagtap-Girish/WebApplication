@@ -31,6 +31,7 @@ namespace PPMMvc
             services.AddTransient<IEmpoyeeRepository,EmpoyeeRepository>();
             services.AddTransient<IRoleRepository, RoleRepository>();
             services.AddTransient<IProjectRepository,ProjectRepository>();
+            services.AddTransient<IEmployeeToProject, EmployeeToProjectRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

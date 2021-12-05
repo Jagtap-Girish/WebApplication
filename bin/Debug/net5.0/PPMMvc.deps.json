@@ -338,6 +338,75 @@
           "lib/net35/Ado2Entity.dll": {}
         }
       },
+      "Extended.Wpf.Toolkit/4.1.0": {
+        "runtime": {
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          },
+          "lib/net40/Xceed.Wpf.Toolkit.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        },
+        "resources": {
+          "lib/net40/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/hu/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net40/it/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/ja-JP/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net40/pt-BR/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net40/ro/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net40/ru/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/sv/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net40/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        },
+        "compile": {
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {},
+          "lib/net40/Xceed.Wpf.AvalonDock.dll": {},
+          "lib/net40/Xceed.Wpf.Toolkit.dll": {}
+        }
+      },
       "Humanizer.Core/2.2.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -1793,6 +1862,9 @@
         }
       },
       "PPMMvc.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.11"
+        },
         "runtime": {
           "PPMMvc.Models.dll": {}
         },
@@ -1802,6 +1874,7 @@
       },
       "Repo/1.0.0": {
         "dependencies": {
+          "Extended.Wpf.Toolkit": "4.1.0",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "PPMMvc.Models": "1.0.0",
           "System.Configuration.ConfigurationManager": "5.0.0",
@@ -3514,6 +3587,13 @@
       "sha512": "sha512-zJEtIxU0T0GjyqQPQZbLKH1yHrAM4JBaDdAuQWYKa4F4Pq1yy9RjaJlL0s5d3UC/gx1FlVdI1HUoYyZU1Tp6Yg==",
       "path": "ado2entity/1.0.0.3",
       "hashPath": "ado2entity.1.0.0.3.nupkg.sha512"
+    },
+    "Extended.Wpf.Toolkit/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wXyuHE2ut8OIDUgi1dfyX1qVDQClc4ARmM9yfB0MAshudfaWhtXedWR34zSCIN2gu7CPzE3+u9iLvBv5uBxROg==",
+      "path": "extended.wpf.toolkit/4.1.0",
+      "hashPath": "extended.wpf.toolkit.4.1.0.nupkg.sha512"
     },
     "Humanizer.Core/2.2.0": {
       "type": "package",

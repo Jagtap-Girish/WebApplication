@@ -64,9 +64,9 @@ namespace PPMMvc.Controllers
                 _employeeRepository.Add(emp);
                 return RedirectToAction(nameof(Index));
             }
-            catch 
+            catch (Exception e)
             {
-                return View();
+                return View(e);
             }
         }
 
