@@ -22,20 +22,25 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoleId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoleName)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.RoleId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.RoleId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.RoleId })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoleId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoleName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.RoleId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.RoleId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.RoleId })
+                </td>
+            </tr>
+        } @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">window.onload = function () { alert("@ViewBag.Message"); };</script>
+
+        }
     </tbody>
 </table>

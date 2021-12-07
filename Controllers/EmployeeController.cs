@@ -58,7 +58,7 @@ namespace PPMMvc.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Employee emp)
         {
-            
+            var employees= _employeeRepository.GetAll();
             try
             {
                 _employeeRepository.Add(emp);
@@ -66,7 +66,8 @@ namespace PPMMvc.Controllers
             }
             catch (Exception e)
             {
-                return View(e);
+                ViewBag.Message = "You can not add employees with same name";
+                return View("Index",employees);
             }
         }
 

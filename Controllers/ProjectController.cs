@@ -74,6 +74,7 @@ namespace PPMMvc.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Project project)
         {
+            var projects = _projectRepository.GetAll();
             try
             {
                 _projectRepository.Add(project);
@@ -82,8 +83,9 @@ namespace PPMMvc.Controllers
             }
             catch (Exception ex)
             {
+                ViewBag.Message ="You can not add project with same name";
                 Console.WriteLine(ex);
-                return View();
+                return View("Index", projects);
             }
         }
 

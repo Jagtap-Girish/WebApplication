@@ -42,6 +42,7 @@ namespace PPMMvc.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Role role)
         {
+            var roles = _roleRepository.GetAll();
             try
             {
                 _roleRepository.Add(role);
@@ -49,7 +50,8 @@ namespace PPMMvc.Controllers
             }
             catch
             {
-                return View();
+                ViewBag.Message = "You can not add role with same name";
+                return View("List", roles);
             }
         }
 
