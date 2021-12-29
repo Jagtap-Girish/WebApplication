@@ -19,19 +19,44 @@ namespace PPMMvc.Controllers
         // GET: ProjectController1
         public ActionResult Index()
         {
-            return View();
+
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         // GET: ProjectController1/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         // GET: ProjectController1/Create
         public ActionResult Create()
         {
-            return View();
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         // POST: ProjectController1/Create
@@ -52,7 +77,15 @@ namespace PPMMvc.Controllers
         // GET: ProjectController1/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         // POST: ProjectController1/Edit/5
@@ -73,8 +106,16 @@ namespace PPMMvc.Controllers
         // GET: ProjectController1/Delete/5
         public ActionResult Delete(int id)
         {
-            Project p=_projectRepository.Get(id);
-            return View(p);
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                Project p = _projectRepository.Get(id);
+                return View(p);
+            }
         }
 
         // POST: ProjectController1/Delete/5
@@ -91,6 +132,19 @@ namespace PPMMvc.Controllers
             {
                 return View();
             }
+        }
+        public bool sessionCheck()
+        {
+            if (HttpContext.Session.GetString("username") == null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            throw new NotSupportedException();
         }
     }
 }

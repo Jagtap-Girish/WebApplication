@@ -1,0 +1,73 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor context
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    var cookievalue = context.HttpContext.Request.Cookies["User"];
+    if (cookievalue == null)
+    {
+        <p>@Html.ActionLink("Login", "Login", "Login")</p>
+        @httpContextAccessor.HttpContext.Session.GetString("login")
+    }
+}
+@inject IHttpContextAccessor HttpContextAccessor
+@*@{
+        var session = HttpContextAccessor.HttpContext.Session.GetString("userName");
+        if (session != null)
+        {
+            <h1>@Context.Session.GetString("username")</h1>
+            Response.Redirect("~/Account/LogOff");
+            HttpContext.Current.Response.Redirect("~/Account/Dashboard.aspx");
+            Response.Redirect("~/err.aspx", false);
+            HttpContext.Current.ApplicationInstance.CompleteRequest();
+            return Redirect("http://www.google.com");
+        }
+
+    }*@
+@model PPMMvc.Models.Login
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = "Login";
+
+}
+
+<h1>Login</h1>
+
+<h4>Login</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Signup">Back to SignUp</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        if (TempData["msg"] != null)
+        {
+            <script>
+            alert('@TempData["msg"]')
+            </script>
+        }
+    }
+}

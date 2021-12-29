@@ -20,21 +20,44 @@ namespace PPMMvc.Controllers
         // GET: RoleController
         public ActionResult Index()
         {
-            var roleRepository = _roleRepository.GetAll();
-            return View("List",roleRepository);
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }else
+            {
+                var roleRepository = _roleRepository.GetAll();
+            return View("List", roleRepository);
+            }
         }
 
         // GET: RoleController/Details/5
         public ActionResult Details(int id)
         {
-           var role= _roleRepository.Get(id);
-            return View(role);
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                var role = _roleRepository.Get(id);
+                return View(role);
+            }
         }
 
         // GET: RoleController/Create
         public ActionResult Create()
         {
-            return View();
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         // POST: RoleController/Create
@@ -58,8 +81,16 @@ namespace PPMMvc.Controllers
         // GET: RoleController/Edit/5
         public ActionResult Edit(int id)
         {
-            var roleDetails = _roleRepository.Get(id);
-            return View(roleDetails);
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                var roleDetails = _roleRepository.Get(id);
+                return View(roleDetails);
+            }
         }
 
         // POST: RoleController/Edit/5
@@ -81,8 +112,16 @@ namespace PPMMvc.Controllers
         // GET: RoleController/Delete/5
         public ActionResult Delete(int id)
         {
-            var deleteRole = _roleRepository.Get(id);
-            return View(deleteRole);
+            if (sessionCheck())
+            {
+
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                var deleteRole = _roleRepository.Get(id);
+                return View(deleteRole);
+            }
         }
 
         // POST: RoleController/Delete/5
@@ -99,6 +138,20 @@ namespace PPMMvc.Controllers
             {
                 return View();
             }
+        }
+
+        public bool sessionCheck()
+        {
+            if (HttpContext.Session.GetString("username") == null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            throw new NotSupportedException();
         }
     }
 }

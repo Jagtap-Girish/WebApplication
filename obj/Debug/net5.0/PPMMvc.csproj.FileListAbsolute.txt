@@ -320,3 +320,6 @@ C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\EmployeeToP
 C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\EmployeeToProject\Details.cshtml.g.cs
 C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\EmployeeToProject\Delete.cshtml.g.cs
 C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Project\List.cshtml.g.cs
+C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Login\Login.cshtml.g.cs
+C:\Users\hp\Source\Repos\WebApplication\bin\Debug\net5.0\RestSharp.dll
+C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Shared\Login.cshtml.g.cs
