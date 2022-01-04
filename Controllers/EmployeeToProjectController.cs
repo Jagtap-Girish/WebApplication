@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace PPMMvc.Controllers
 {
+    [Authorize(Roles = "Manager")]
     public class EmployeeToProjectController : Controller
     {
         private IEmployeeToProject _employeeToProjectRopsitory;
@@ -30,43 +32,25 @@ namespace PPMMvc.Controllers
         // GET: EmployeeToProjectController
         public ActionResult Index()
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+           
                 var employeeList = _employeeToProjectRopsitory.GetAll();
             return View(employeeList);
-            }
+            
         }
 
         // GET: EmployeeToProjectController/Details/5
         public ActionResult Details(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 var emp = _employeeToProjectRopsitory.Get(id);
             return View(emp);
-             }
+             
         }
 
         // GET: EmployeeToProjectController/Create
         public ActionResult Create()
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 IEnumerable<Project> projects;
             ProjectRepository projectRepository = new ProjectRepository(Configuration);
             projects = projectRepository.GetAll();
@@ -76,7 +60,7 @@ namespace PPMMvc.Controllers
             employees = empoyeeRepository.GetAll();
             ViewData["employees"] = new SelectList(employees, "FirstName", "FirstName");
             return View("Create");
-        }
+        
         }
 
         // POST: EmployeeToProjectController/Create
@@ -99,15 +83,9 @@ namespace PPMMvc.Controllers
         // GET: EmployeeToProjectController/Edit/5
         public ActionResult Edit(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+          
                 return View();
-        }
+        
         }
 
         // POST: EmployeeToProjectController/Edit/5
@@ -128,16 +106,10 @@ namespace PPMMvc.Controllers
         // GET: EmployeeToProjectController/Delete/5
         public ActionResult Delete(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 var employee = _employeeToProjectRopsitory.Get(id);
                 return View(employee);
-            }
+            
         }
 
         // POST: EmployeeToProjectController/Delete/5

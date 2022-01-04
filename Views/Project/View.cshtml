@@ -1,23 +1,22 @@
 ﻿@model PPMMvc.Models.Project
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "View";
 }
 
-<h1>Add</h1>
-
+<h1>View</h1>
 
 <h4>Project</h4>
-
-
-
 <hr />
 <div class="row">
- 
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="View">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
+            <div class="form-group">
+                <label asp-for="ProjectId" class="control-label"></label>
+                <input asp-for="ProjectId" class="form-control" />
+                <span asp-validation-for="ProjectId" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="ProjectName" class="control-label"></label>
                 <input asp-for="ProjectName" class="form-control" />
@@ -25,26 +24,23 @@
             </div>
             <div class="form-group">
                 <label asp-for="StartDate" class="control-label"></label>
-                <input asp-for="StartDate" class="form-control"  />
+                <input asp-for="StartDate" class="form-control" />
                 <span asp-validation-for="StartDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="EndDate" class="control-label"></label>
-                <input asp-for="EndDate" class="form-control"  />
+                <input asp-for="EndDate" class="form-control" />
                 <span asp-validation-for="EndDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Budget" class="control-label"></label>
                 <input asp-for="Budget" class="form-control" />
-
                 <span asp-validation-for="Budget" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary"  />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-            
         </form>
-
     </div>
 </div>
 
@@ -53,7 +49,5 @@
 </div>
 
 @section Scripts {
-
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-
 }

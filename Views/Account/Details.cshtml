@@ -1,0 +1,21 @@
+﻿
+<h1>Welcome @User.Identity.Name</h1>
+
+<h3>Your Details</h3>
+
+
+
+
+<div>
+<ul>
+    @foreach(var item in ViewBag.Employee) {
+
+    <li>
+        Id - @item.Id;
+
+    </li>
+    }
+
+</ul>
+    
+</div>

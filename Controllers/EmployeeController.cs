@@ -33,53 +33,39 @@ namespace PPMMvc.Controllers
         
         public ActionResult Index()
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+           
                 var employeeList = _employeeRepository.GetAll();
                 return View(employeeList);
-            }
+            
         }
 
         // GET: EmployeeController/Details/5
-       // [Route("Employee/Details/{Id}")]
+        // [Route("Employee/Details/{Id}")]
+        [Authorize(Roles = "Employee")]
         public ActionResult Details(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+           
                 var emp = _employeeRepository.Get(id);
                 return View(emp);
-            }
+            
         }
 
         // GET: EmployeeController/Create
+
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 IEnumerable<Role> roles;
                 RoleRepository roleRepository = new RoleRepository(Configuration);
                 roles = roleRepository.GetAll();
                 ViewData["roles"] = new SelectList(roles, "RoleId", "RoleName");
                 return View("Create");
-            }
+           
         }
 
         // POST: EmployeeController/Create
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Employee emp)
@@ -100,13 +86,7 @@ namespace PPMMvc.Controllers
         // GET: EmployeeController/Edit/5
         public ActionResult Edit(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 IEnumerable<Role> roles;
                 RoleRepository roleRepository = new RoleRepository(Configuration);
                 roles = roleRepository.GetAll();
@@ -114,7 +94,7 @@ namespace PPMMvc.Controllers
                 var emp = _employeeRepository.Get(id);
 
                 return View(emp);
-            }
+            
         }
 
         // POST: EmployeeController/Edit/5
@@ -136,16 +116,10 @@ namespace PPMMvc.Controllers
         // GET: EmployeeController/Delete/5
         public ActionResult Delete(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 var employee = _employeeRepository.Get(id);
                 return View(employee);
-            }
+            
         }
 
         // POST: EmployeeController/Delete/5

@@ -323,3 +323,8 @@ C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Project\Lis
 C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Login\Login.cshtml.g.cs
 C:\Users\hp\Source\Repos\WebApplication\bin\Debug\net5.0\RestSharp.dll
 C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Shared\Login.cshtml.g.cs
+C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Project\View.cshtml.g.cs
+C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Account\Index.cshtml.g.cs
+C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Account\Secret.cshtml.g.cs
+C:\Users\hp\Source\Repos\WebApplication\obj\Debug\net5.0\Razor\Views\Account\Details.cshtml.g.cs

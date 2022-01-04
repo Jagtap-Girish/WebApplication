@@ -10,9 +10,12 @@ using Repo.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Dynamic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PPMMvc.Controllers
 {
+
+    [Authorize(Roles = "Manager")]
     public class ProjectController : Controller
     {
 
@@ -23,20 +26,17 @@ namespace PPMMvc.Controllers
             _projectRepository = projectRepository;
             Configuration = configuration;
         }
+
+        
+        [Authorize]
         // GET: ProjectController
         public ActionResult Index()
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 var projects = _projectRepository.GetAll();
 
             return View(projects);
-            }
+            
         }
 
 
@@ -47,14 +47,7 @@ namespace PPMMvc.Controllers
 
         public ActionResult Details(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
-
+           
                 EmployeeToProjectRepository employeeToProjectRepository = new EmployeeToProjectRepository(Configuration);
                 IList<EmployeeToProject> Employee = (IList<EmployeeToProject>)employeeToProjectRepository.GetAll();
                 IList<EmployeeToProject> Emp = new List<EmployeeToProject>();
@@ -69,25 +62,19 @@ namespace PPMMvc.Controllers
                     }
                 }
                 return View("List", Emp);
-            }
+            
         }
 
         // GET: ProjectController/Create
         public ActionResult Create()
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 IEnumerable<Employee> employees;
                 EmpoyeeRepository employeeRepository = new EmpoyeeRepository(Configuration);
                 employees = employeeRepository.GetAll();
                 ViewBag.EmployeeId = new MultiSelectList(employees, "Id", "FirstName");
                 return View("Create");
-            }
+            
         }
 
         // POST: ProjectController/Create
@@ -95,21 +82,28 @@ namespace PPMMvc.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Project project)
         {
-            var projects = _projectRepository.GetAll();
-           
-            try
+            if (ModelState.IsValid)
             {
-              
-                // ViewBag.EmployeeId = new SelectList((System.Collections.IEnumerable)Index(), "ProjectId", "text");
-               
-                _projectRepository.Add(project);
-                return RedirectToAction(nameof(Index));
+                var projects = _projectRepository.GetAll();
+
+                try
+                {
+
+                    // ViewBag.EmployeeId = new SelectList((System.Collections.IEnumerable)Index(), "ProjectId", "text");
+
+                    _projectRepository.Add(project);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "You can not add project with same name";
+                    Console.WriteLine(ex);
+                    return View("Index", projects);
+                }
             }
-            catch (Exception ex)
-            {
-                ViewBag.Message ="You can not add project with same name";
-                Console.WriteLine(ex);
-                return View("Index", projects);
+            else {
+
+                return View("Create");
             }
            
 
@@ -118,20 +112,14 @@ namespace PPMMvc.Controllers
         // GET: ProjectController/Edit/5
         public ActionResult Edit(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+            
                 IEnumerable<Employee> employees;
                 EmpoyeeRepository employeeRepository = new EmpoyeeRepository(Configuration);
                 employees = employeeRepository.GetAll();
                 ViewData["employees"] = new MultiSelectList(employees, "Id", "FirstName");
                 var projectDetails = _projectRepository.Get(id);
                 return View(projectDetails);
-            }
+            
         }
 
         // POST: ProjectController/Edit/5
@@ -153,13 +141,7 @@ namespace PPMMvc.Controllers
         // GET: ProjectController1/Delete/5
         public ActionResult Delete(int id)
         {
-            if (sessionCheck())
-            {
-
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+           
                 bool flag = true;
                 Project p = _projectRepository.Get(id);
                 var projects = _projectRepository.GetAll();
@@ -193,7 +175,7 @@ namespace PPMMvc.Controllers
                 {
                     return View(p);
                 }
-            }
+            
         }
 
 

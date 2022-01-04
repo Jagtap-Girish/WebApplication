@@ -6,6 +6,6 @@
     "\\Views\\Project",
     "\\Views\\Shared"
   ],
-  "SelectedNode": "\\Views\\Project\\Create.cshtml",
+  "SelectedNode": "\\Controllers\\LoginController.cs",
   "PreviewInSolutionExplorer": false
 }
